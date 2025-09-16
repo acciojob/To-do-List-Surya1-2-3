@@ -1,7 +1,7 @@
 //your code here
 
-const element=document.getElementById('btn')
-const input=document.getElementById("text-field")
+const element=document.getElementById('addTodoBtn')
+const input=document.getElementById("newTodoInput")
 
 function submit(){
 	const data=input.value
@@ -9,9 +9,8 @@ function submit(){
 		alert("todo item is empty")
 	}else{
 		const ele=document.createElement('li');
-		ele.classList.add("todo-item")
 		ele.innerHTML=data;
-		const parent=document.getElementById("todolist")
+		const parent=document.getElementById("todoList")
 		parent.appendChild(ele);
 		input.value=""
 	}
